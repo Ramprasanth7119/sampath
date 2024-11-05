@@ -1,0 +1,313 @@
+/* General Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home-app {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.home-header-tag {
+  background-color: #e0f7fa;
+  color: #006064;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Call to Action Button */
+.home-cta-button {
+  height: 50px;
+  align-items: center;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-cta-button:hover {
+  background-color: #555;
+}
+
+.home-arrow {
+  margin-left: 8px;
+}
+
+/* Card Layout for Row 1 (Full Width) */
+.home-row-full {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.home-card-full {
+  flex: 1;
+  min-width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Effects for Full Cards */
+.home-card-full:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.home-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects for Full Cards - Content */
+.home-card-full:hover .home-card-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.manufacturing-button {
+  border-radius: 20px;
+  padding: 8px 12px;
+  border: none;
+  font-weight: 600;
+  background-color: rgb(240, 184, 136);
+  color: rgb(103, 74, 49);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.manufacturing-button:hover {
+  background-color: rgb(239, 207, 179);
+}
+
+.home-card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects for Title Text */
+.home-card-full:hover .home-card-content h3 {
+  color: #ffeb3b; /* Highlight text on hover */
+}
+
+.home-card-content p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Hover for Arrow Circle */
+.arrow-circle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding-right: 8px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-circle .arrow {
+  padding: 10px;
+}
+
+.arrow-circle:hover {
+  background-color: #868282;
+}
+
+/* Row 2: Scrollable Cards */
+.home-row-scroll {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.home-row-scroll::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+.home-card-scroll {
+  flex: 0 0 150px;
+  height: 250px;
+  margin-top: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects for Scrollable Cards */
+.home-card-scroll:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.home-card-content2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  box-sizing: border-box;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.home-card-content2 h3 {
+  font-size: 13px;
+  color: white;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.home-card-content2 p {
+  font-size: 13px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects for Content in Scrollable Cards */
+.home-card-scroll:hover .home-card-content2 h3,
+.home-card-scroll:hover .home-card-content2 p {
+  color: #ffeb3b; /* Highlight text on hover */
+}
+
+.home-card-scroll:hover .home-card-content2 {
+  background: rgba(0, 0, 0, 0.6); /* Darker background on hover */
+}
+
+.home-row-scroll::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+}
+
+.home-row-scroll::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .home-row-full {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home-card-full {
+    height: 250px;
+  }
+
+  .home-card-scroll {
+    height: 250px;
+    flex: 0 0 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2rem;
+  }
+
+  .home-row-full {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home-card-full {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home-card-content {
+    padding: 15px;
+  }
+
+  .manufacturing-button {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .arrow-circle {
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+.line .home-cta-button {
+  height: 50px;
+  align-items: center;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-cta-button:hover {
+  background-color: #555;
+}
+
+.home-arrow {
+  margin-left: 8px;
+}
+
+.line {
+  display: flex;
+  gap: 100px;
+}
